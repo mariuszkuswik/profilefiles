@@ -1,0 +1,9 @@
+##### ENVIRONMENT VARIABLES #####
+
+export PATH="$PATH:/home/mariusz/Skrypty:/home/mariusz/Git/fzf/bin"
+export EDITOR="VIM"
+
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth

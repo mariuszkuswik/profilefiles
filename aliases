@@ -1,0 +1,28 @@
+###### ALIASY ######
+
+# Nadpisywanie
+
+# Parametr i odpowiada za interakcje przy usuwaniu pliiku, zapobiega to jego przypadkowemu usunieciu
+
+alias cp="cp -i"
+alias mv="mv -i" 
+alias rm="rm -i"
+
+# Bash_profile
+
+alias moje="vim ~/.profile"
+alias mojeakt="source ~/.profile"
+
+# Wszystkie inne aliasy
+
+alias mhistory="read $zmienna && history | grep "$zmienna""
+alias nano="nano -c"
+alias dom="'cd /mnt/c/Dane_linux'"
+alias wgetncc="wget --no-check-certificate"
+alias ls="ls --color"
+alias cls="clear"
+
+###### TMUX ######
+
+# Do sprawdzenia jak dodać parametr do komendy aliasowej ktora wywoluje 
+

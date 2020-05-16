@@ -1,0 +1,46 @@
+# DO ZROBIENIA : 
+# .vimrc powinien byc linkiem do pliku w tym katalogu 
+
+
+#### PROFILE FILES ####
+
+# Funkcja sprawdza czy podany plik istnieje, jezeli tak uruchamia go 
+function check_if_exists ()
+{
+ 
+    if [ -f "$1" ]
+    then 
+        . "$1" 
+    else 
+        echo "$1 Nie zostal zaladowany"
+    fi
+} 
+
+# Uruchomienie kolejno plikow profilowych 
+
+check_if_exists "$HOME/profilefiles/aliases"
+check_if_exists "$HOME/profilefiles/environment_variables"
+check_if_exists "$HOME/profilefiles/tmux_start"
+check_if_exists "$HOME/profilefiles/usefull"
+check_if_exists "$HOME/.servers"
+
+#### PUSHD #####
+
+# Dodanie pierwszego otwartego katalogu do stacka 
+# Wyswietlenie elementow stacka to dirs -v 
+# Przejscie do pierwszego stacka to cd ~1 
+
+# Sprawdzenie ile elementow jest obecnie w stacku
+count_stack=`dirs -p | wc -l`
+
+# Jezeli dysk C zostal zamontowany pod mnt to dodajemy go do stacka, przydatne dla WSLa 
+if [ -d "/mnt/c" ] && [ "$count_stack" -le 1 ]  
+then 
+    pushd  /mnt/c
+fi
+
+# Jezeli w stacku jest 1 katalog lub mniej to montujemy HOME
+if [ "$count_stack" -le 1 ]
+then 
+    pushd "$HOME"
+fi

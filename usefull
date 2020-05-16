@@ -1,0 +1,83 @@
+####################### PRZYDATNE ##########################
+
+
+: '
+Komentowanie wielu linii
+linia 2
+'
+
+
+####### WYŚWIETLANIE LISTY ZAINSTALOWANYCH APLIKACJI #######
+
+# dpkg -l
+
+
+####### KOPIOWANIE WSZYSTKIEGO PO ZA KONKRETNYM PLIKIEM #######
+
+# Kopiowanie wszystkiego po za Default.png do katalogu dest
+# cp -r !(Default.png) /dest
+# eog ( Program do otwierania obrazow )  
+
+
+
+####### KOPIOWANIE NANO #######
+
+# Kopiowanie w nano to alt + 6, wklejanie ctrl + u
+
+####### GREP ##########
+
+# grep -A 10 Wyświetla 10 linii po znalezieniu szukanego wyniku, A jest tu od after
+# grep -B 10 Wyświetla 10 linii przed szukanym wynikiem, B jest tu od before 
+# grep -v WYŚWIETLA WSZYSTYKO PO ZA TYM CO WSKAZANE
+
+
+
+###### RANDOM NAUKA ######
+
+# Po wlaczeniu konsoli powinno wyświetlać losowa komende z informacja co robi
+
+# echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)
+
+
+
+####################### UPRAWNIENIA LINUXOWE W UBUNTU FOR WINDOWS ##################################
+
+
+# If you're referencing files in the Windows file system, they do not, by default, retain Linux permissions. 
+# However, there's a way to enable that. Edit or create (using sudo) /etc/wsl.conf and add the following:
+
+# [automount]
+# options = "metadata"
+
+
+####################### WŁASNY BASH_PROFILE ########################################################
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+
+: '
+if [ -f ~/dotfiles/aliases ]; then
+    . ~/dotfiles/aliases
+fi
+'
+
+############## WHILE WCZYTYWANIE ZAWARTOŚCI PLIKU DO ZMIENNEJ ####################
+
+#!/bin/bash
+
+# cat b1.txt | while read zmienna
+# do
+# echo "dziala $zmienna"
+# done
+
+
+
+
+
+# SimpleHTTPServer skladnia
+
+# python -m SimpleHTTPServer 8080
+
