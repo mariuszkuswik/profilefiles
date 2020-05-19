@@ -16,7 +16,7 @@ fi
 
 ```
 
-if [ -f "$HOME"/profilefiles/start ] ; then
+if [ -f "$HOME"/profilefiles/vimrc ] ; then
   source ~/.profilefiles/vimrc
 fi
 
