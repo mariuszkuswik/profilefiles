@@ -1,3 +1,23 @@
+#!/bin/bash
+
 #### TMUX TEMP #####
 
-tmux
+is_tmux=`tmux ls | cut -d : -f 1 | head -n 1`
+
+
+echo "$is_tmux"
+
+
+if [ -z "$is_tmux" ]
+then
+
+    tmux
+
+else
+
+    tmux a -t "$is_tmux"
+
+fi
+
+
+
