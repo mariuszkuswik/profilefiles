@@ -8,17 +8,12 @@
 if [ -f "$HOME"/profilefiles/start ] ; then
     . "$HOME"/profilefiles/start
 fi
-
  ```
 
 <h2> Source dla vimrc </h2>
 <b>Do wklejenia w .vimrc</b>
 
 ```
-
-if [ -f "$HOME"/profilefiles/vimrc ] ; then
-  source "$HOME"/profilefiles/vimrc
-fi
-
+  source ~/profilefiles/vimrc
 ```
 
