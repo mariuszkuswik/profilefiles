@@ -19,5 +19,5 @@ fi
 
 <h3>Do dodania : </h3>
 <ol>
-    <li>Plik z listą startowych aplikacji, po jednorazowym sprawdzeniu powinien tworzyć plik potwierdzający, że wszystko jest już zainstalowane, coś w rodzaju EULI </li>
+    <li>aaa</li>
 </ol>
